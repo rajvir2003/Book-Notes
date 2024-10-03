@@ -62,7 +62,7 @@ app.post("/addBook", async (req, res) => {
   const isbn = req.body.isbn;
   const read_date = req.body.read_date;
   const rating = req.body.rating;
-
+  
   await db.query("INSERT INTO books (title, description, isbn_code, rating, read_date) VALUES ($1,$2,$3,$4,$5);", [title, desc, isbn, rating, read_date]);
   res.redirect("/");
 });
