@@ -36,7 +36,7 @@ app.get("/", async (req, res) => {
       id: record.id,
       title: record.title,
       description: record.description,
-      ISBN_code: record.isbn_code,
+      img_url: `https://covers.openlibrary.org/b/isbn/${record.isbn_code}-L.jpg`,
       rating: record.rating,
       date: format(record.read_date, 'yyyy-MM-dd')
     });
